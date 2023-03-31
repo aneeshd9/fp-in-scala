@@ -33,12 +33,6 @@ object MyProgram:
 
     loop(n, 0, 1)
 
-  @main def printAbs: Unit =
-    println(formatAbs(-42))
-    println(formatFactorial(7))
-    println(formatResult("absolute value", -10, abs))
-    println(fib(5))
-
 object Search:
   def findFirst(ss: Array[String], key: String): Int =
     @annotation.tailrec
@@ -79,7 +73,3 @@ object PolymorphicFunctions:
   def compose[A, B, C](f: B => C, g: A => B): A => C =
     (a: A) => f(g(a))
 
-  @main def main(): Unit =
-    println(findFirst(Array(7, 9, 13), (x: Int) => x == 9))
-    println(isSorted(Array(1, 2, 3, 4, 5), _ > _))
-    println(isSorted(Array(1, 2, 3, 6, 5), _ > _))
